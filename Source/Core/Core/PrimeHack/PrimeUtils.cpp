@@ -1,6 +1,7 @@
 #include "Core/PrimeHack/PrimeUtils.h"
 #include <Common/Timer.h>
 #include <cstdarg>
+#include <inttypes.h>
 
 std::string info_str;
 
@@ -218,7 +219,7 @@ void DevInfoMatrix(const char* name, const Transform& t)
     "\n   %.3f    %.3f    %.3f    %.3f"
     "\n   %.3f    %.3f    %.3f    %.3f";
 
-  __int64 bufsize = snprintf(NULL, 0, format, 
+  uint64_t bufsize = snprintf(NULL, 0, format,
     t.m[0][0], t.m[0][1], t.m[0][2], t.m[0][3], 
     t.m[1][0], t.m[1][1], t.m[1][2], t.m[1][3], 
     t.m[2][0], t.m[2][1], t.m[2][2], t.m[2][3]);
