@@ -86,13 +86,16 @@ const Info<bool> GFX_WAIT_FOR_SHADERS_BEFORE_STARTING{
 const Info<ShaderCompilationMode> GFX_SHADER_COMPILATION_MODE{
     {System::GFX, "Settings", "ShaderCompilationMode"}, ShaderCompilationMode::Synchronous};
 const Info<int> GFX_SHADER_COMPILER_THREADS{{System::GFX, "Settings", "ShaderCompilerThreads"}, 1};
-const Info<int> GFX_SHADER_PRECOMPILER_THREADS{
+const Info<int> GFX_SHADER_PRECOMPILER_THREADS{{System::GFX, "Settings", "ShaderPrecompilerThreads"}, 1};
+//There is no more Config info. Commented out the duplicates.
+#if 0
 const Info<ShaderCompilationMode> GFX_SHADER_COMPILATION_MODE{
     {System::GFX, "Settings", "ShaderCompilationMode"}, ShaderCompilationMode::AsynchronousUberShaders};
 const Info<int> GFX_SHADER_COMPILER_THREADS{
     {System::GFX, "Settings", "ShaderCompilerThreads"}, 1};
 const Info<int> GFX_SHADER_PRECOMPILER_THREADS{
     {System::GFX, "Settings", "ShaderPrecompilerThreads"}, 1};
+#endif
 const Info<bool> GFX_SAVE_TEXTURE_CACHE_TO_STATE{
     {System::GFX, "Settings", "SaveTextureCacheToState"}, true};
 
